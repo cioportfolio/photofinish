@@ -5,6 +5,7 @@ import colorsys
 import pygame
 import sys
 
+# If you find you need better contrast this array can be used to adjust the raw colour values for a typical LED gamma e.g. new_val=gamma8[raw_val]
 gamma8 = [
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1,
@@ -26,10 +27,10 @@ gamma8 = [
 
 pygame.init()
 
-pScale = 10
+pScale = 10 # size of pixels drawn to illustrate the generated immage
 pRad = int(pScale/2)
-matrixHeight = 32
-font = 'FreeSansBold.ttf'
+matrixHeight = 32 # number of LEDs that will be used in the strip
+font = 'FreeSansBold.ttf' # path and name of font file to be used
 myfont = pygame.font.Font(font, matrixHeight-4)
 black = (0,0,0)
 
@@ -57,4 +58,4 @@ def buildMessage(text, name, foreground, background):
         defFile.close()
         pygame.display.flip()
         
-buildMessage("Hello     ", "message", (255,255,0),(0,0,0))
+buildMessage("Hello     ", "message", (255,255,0),(0,0,0)) # change the message and RGB colours as required
