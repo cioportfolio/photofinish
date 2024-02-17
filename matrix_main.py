@@ -47,4 +47,4 @@ def pixels_show(col):
 print("Starting...")
 while True:
     for c in range(len(message_data)-1,-1,-1):       
-        pixels_show(c) # Scans the message in reverse assuming the resulting photo finish will be filled from right to left
+        pixels_show(c) # Scans the message in reverse assuming the resulting photo finish will be filled from right to left33

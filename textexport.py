@@ -4,6 +4,7 @@ import math
 import colorsys
 import pygame
 import sys
+import numpy as np
 
 # If you find you need better contrast this array can be used to adjust the raw colour values for a typical LED gamma e.g. new_val=gamma8[raw_val]
 gamma8 = [
@@ -27,35 +28,44 @@ gamma8 = [
 
 pygame.init()
 
-pScale = 10 # size of pixels drawn to illustrate the generated immage
+pScale = 5 # size of pixels drawn to illustrate the generated immage
 pRad = int(pScale/2)
 matrixHeight = 32 # number of LEDs that will be used in the strip
-font = 'FreeSansBold.ttf' # path and name of font file to be used
+font = 'Harabara Mais Demo.otf' # path and name of font file to be used
 myfont = pygame.font.Font(font, matrixHeight-4)
+myfont.italic=True
+myfont.bold=True
 black = (0,0,0)
 
-def buildMessage(text, name, foreground, background):
-        screen = pygame.display.set_mode((matrixHeight * pScale, matrixHeight * pScale))
+def buildMessage(name, text, foreground, background):
+    buildMessages(name, [(text, foreground, background)])
+
+def buildMessages(name, msglist):
+    screen = pygame.display.set_mode((matrixHeight * pScale, matrixHeight * pScale))
+    res = np.zeros((0,matrixHeight,3), dtype=np.uint8)
+    totw = 0
+    for (text, foreground, background) in msglist:
         textsurface = myfont.render(text, True, foreground, background).convert_alpha()
         textWidth = textsurface.get_width()
-        print(textWidth)
-        screen = pygame.display.set_mode((textWidth * pScale, matrixHeight * pScale))
+        totw+=textWidth
         leds = pygame.Surface((textWidth, matrixHeight),pygame.SRCALPHA, screen)
         leds.blit(textsurface, (0,int((matrixHeight-textsurface.get_height())/2)))
-        res = pygame.surfarray.pixels3d(leds)
-        screen.fill(black)
-        defFile  = open(name+".py", "w")
-        defFile.write("message_data=[]\n")
-        for x in range(textWidth):
-                defFile.write("message_data.append([")
-                for y in range(matrixHeight):
-                        pygame.draw.circle(screen, (res[x,y,0],res[x,y,1],res[x,y,2]),[int(x * pScale + pRad), int(y * pScale + pRad)], pRad)
-                        if y > 0:
-                                defFile.write(", ")
-                        hcol = (res[x,y,0] << 16) | (res[x,y,1] << 8) | (res[x,y,2])
-                        defFile.write(hex(hcol))
-                defFile.write("])\n")
-        defFile.close()
-        pygame.display.flip()
+        res = np.concatenate((res,pygame.surfarray.pixels3d(leds)), axis=0)
+    screen = pygame.display.set_mode((totw * pScale, matrixHeight * pScale))
+    screen.fill(black)
+    defFile  = open(name+".py", "w")
+    defFile.write("message_data=[]\n")
+    for x in range(totw):
+            defFile.write("message_data.append([")
+            for y in range(matrixHeight):
+                    pygame.draw.circle(screen, (res[x,y,0],res[x,y,1],res[x,y,2]),[int(x * pScale + pRad), int(y * pScale + pRad)], pRad)
+                    if y > 0:
+                        defFile.write(", ")
+                    hcol = (res[x,y,0] << 16) | (res[x,y,1] << 8) | (res[x,y,2])
+                    defFile.write(hex(hcol))
+            defFile.write("])\n")
+    defFile.close()
+    pygame.display.flip()
         
-buildMessage("Hello     ", "message", (255,255,0),(0,0,0)) # change the message and RGB colours as required
+#buildMessages("message",[("RUNNING", (0,59,113),(255,255,255)),("2", (235,96,41),(255,255,255)),("TIME        ", (0,59,113),(255,255,255))]) # change the message and RGB colours as required
+buildMessages("message",[("Photo", (0,59,113),(255,255,255)),("finish", (235,96,41),(255,255,255)),("   WoW", (0,59,113),(255,255,255)),("!          ", (235,96,41),(255,255,255))]) # change the message and RGB colours as required
