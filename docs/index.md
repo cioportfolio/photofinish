@@ -39,4 +39,12 @@ Look for:
 
 ## Think about what you have made ##
 
-If you can read the secret message, Well Done! You have completed the first part of the challenge but you have also made something really useful - a photofinish device. These devices are used in major sporting events. Take a look at [this video]()
+If you can read the secret message, Well Done! You have completed the first part of the challenge but you have also made something really useful - a photofinish device. These devices are used in major sporting events. Take a look at [this video](https://www.youtube.com/watch?v=QGNgINohags) for an introduction. You have started to make an app that the presenter describes in his video. Now here are some things to try:
+
+- Set up a pretend race with some friends and use your programme to create a photofinish image of your race. Who won?
+- Do some comparison between each tall thin strip. Can you get the computer to tell you when someone crosses the line? This is a kind of motion detection.
+- Add a timer. Can you calculate the race time of the winner?
+- OpenCV can add text to an image. Can you add times to the photofinish image so you can see how far apart the racers are?
+- Add some interaction. Show a marker line on the photofinish and let people move the line (with the mouse or keyboard) and show a more accurate time.
+- It can be a little fiddly to place the camera just right at the finish line. Add a setup mode to your programme to help you place the camera at the right point before recording a race.
+- You've already seen how you can insert a hidden message into the photofinish image. That was how you read the secret message. Can you make your own image and make a device to show it at the finish line and so that it appears in the photofinish image?
