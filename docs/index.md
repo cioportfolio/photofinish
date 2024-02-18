@@ -1,8 +1,10 @@
-# ![The Secret Message Challenge](photfin.jpg)
+# The Secret Message Challenge
 
 At the [TechJam](https://techjam.softwarecornwall.org/) there is a secret message being scrolled through a single strip of LEDS. You can see the lights changing but you can't make out what the message is saying. You can use computer vision to help. You can use this video to practice on but it doesn't have the same secret message!
 
-![test message](IMG_6230.mp4)
+<video width="320" height="240" controls>
+  <source src="IMG_6230.mp4" type="video/mp4">
+</video>
 
 ## Get some computer vision tools
 
@@ -54,6 +56,10 @@ Things to practice:
     - change the shape of the tall thin section so that you capture the changing LEDs and not the static surroundings
     - change the width of the tall thin section so your final image is readable
     - change the order of the sections (right to left or left to right) so the words appear the right way round.
+
+If you are using the test video you will get something like this - but this is just a test and not the real message you need to find!
+
+![test message](photfin.jpg)
 
 ## Think about what you have made
 
