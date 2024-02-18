@@ -1,6 +1,8 @@
 # The Secret Message Challenge
 
-There is a secret message being scrolled through a single strip of LEDS. You can see the lights changing but you can't make out what the message is saying. You can use computer vision to help.
+At the [TechJam](https://techjam.softwarecornwall.org/) there is a secret message being scrolled through a single strip of LEDS. You can see the lights changing but you can't make out what the message is saying. You can use computer vision to help. You can use this video to practice on but it doesn't have the same secret message!
+
+![test message](IMG_6230.mp4)
 
 ## Get some computer vision tools
 
