@@ -6,7 +6,7 @@ There is a secret message being scrolled through a single strip of LEDS. You can
 
 For this challenge we can use some computer vision tools called "OpenCV". This can work with lots of programing languages, including Python.
 
-The are many online tutorials for working with OpenCV. First we need to install the OpenCV software. You can search for your own instructions or you can try the examples below. The instructions usually include some steps to do a quick check that things are working. Skipping these steps is not a good idea. They don't take very long todo and, if there is a problem, it will save you from wasting loads of time and frustration later on:
+The are many online tutorials for working with OpenCV. First we need to install the OpenCV software. You can search for your own instructions or you can try the examples below. The instructions usually include some steps to do a quick check that things are working. Skipping these steps is not a good idea. They don't take very long to do and, if there is a problem, it will save you from wasting loads of time and frustration later on:
 
 ### Install OpenCV on a Raspberry Pi
 
@@ -48,7 +48,7 @@ Things to practice:
 5. Show the new image you have made
 6. If necessary repeat the steps and make adjustments until you can read the message. Some of the adjustments you might need to try:
 
-    - re-record the video making sure the LED strip is a vertical as possible
+    - re-record the video making sure the LED strip is as vertical as possible
     - change the shape of the tall thin section so that you capture the changing LEDs and not the static surroundings
     - change the width of the tall thin section so your final image is readable
     - change the order of the sections (right to left or left to right) so the words appear the right way round.
@@ -63,4 +63,5 @@ If you can read the secret message, Well Done! You have completed the first part
 - OpenCV can add text to an image. Can you add times to the photofinish image so you can see how far apart the racers are?
 - Add some interaction. Show a marker line on the photofinish and let people move the line (with the mouse or keyboard) and show a more accurate time.
 - It can be a little fiddly to place the camera just right at the finish line. Add a setup mode to your programme to help you place the camera at the right point before recording a race.
-- You've already seen how you can insert a hidden message into the photofinish image. That was how you read the secret message. Can you make your own image and make a device to show it at the finish line and so that it appears in the photofinish image?
+- Add some sound so that you can press a button and make a sound to start the race and use the photofinish to get an accurate time.
+- You've already seen how you can insert a hidden message into the photofinish image. That was how you read the secret message. Can you make your own image and make a device to show it at the finish line so that it appears in the photofinish image?
