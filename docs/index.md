@@ -1,29 +1,45 @@
-# The Secret Message Challenge #
+# The Secret Message Challenge
 
 There is a secret message being scrolled through a single strip of LEDS. You can see the lights changing but you can't make out what the message is saying. You can use computer vision to help.
 
-## Get some computer vision tools ##
+## Get some computer vision tools
+
 For this challenge we can use some computer vision tools called "OpenCV". This can work with lots of programing languages, including Python.
 
-The are many online tutorials for working with OpenCV. First we need to install the OpenCV software. You can search for your own instructions or you can try these:
+The are many online tutorials for working with OpenCV. First we need to install the OpenCV software. You can search for your own instructions or you can try the examples below. The instructions usually include some steps to do a quick check that things are working. Skipping these steps is not a good idea. They don't take very long todo and, if there is a problem, it will save you from wasting loads of time and frustration later on:
 
-### Install OpenCV on a Raspberry Pi ###
+### Install OpenCV on a Raspberry Pi
+
 [Raspberry Pi Guide](https://raspberrypi-guide.github.io/programming/install-opencv)
 
-### Install OpenCV on a Windows PC ###
+### Install OpenCV on a Windows PC
+
 [Geeks for geeks Guide](https://www.geeksforgeeks.org/how-to-install-opencv-for-python-in-windows/)
 
-## Practice with OpenCV ##
+## Practice with OpenCV
 
-OpenCV can do all sorts of things with images and videos. You can try out lots of examples in the tutorials. You can search for you own examples or try some of the ones in [Geeks for Geeks](https://www.geeksforgeeks.org/opencv-python-tutorial/?ref=lbp).
+OpenCV can do all sorts of things with images and videos. To solve this challenge you will need to use several different bits of OpenCV together. First you need to get some practice and see how things work. You can try out lots of examples in the tutorials and they may give you more ideas for you own projects and challenges. You can search for you own examples or try some of the ones in [Geeks for Geeks](https://www.geeksforgeeks.org/opencv-python-tutorial/?ref=lbp).
 
-Look for:
+Things to practice:
 
 - cutting out and showing part of an image
 - showing a video
 - capturing a video from a camera
 
-## Start using OpenCV to beat the challenge ##
+## Optional extra: Practice working with arrays
+
+OpenCV helps us with computer vision but the computer isn't "seeing" in the same way that people do. The computer camera senses the light in a scene and records it a loads of colour data and stores that in a block of data called an array. OpenCV does all its clever tricks by moving data around arrays and doing maths on the arrays. You will probably need to use arrays to solve this challenge. It would be good to do some practice with arrays or come back here if you get stuck.
+
+There are loads of tutorials and examples about arrays online. Many of them will mention a tool called "numpy". Search for you own guides or try this [guide on Mattermost](https://mattermost.com/blog/beginners-guide-to-numpy/)
+
+Things to practice:
+- make an empty array of a particular shape and size
+- investigate the shape and size of arrays
+- fill arrays with different types of data
+- work with slices and sections of arrays
+- combine small arrays into a bigger array
+
+## Start using OpenCV to solve the challenge
 
 1. Capture a video of the LED strip with a camera
 2. Process the video so that you can work on it one frame at a time
@@ -37,7 +53,7 @@ Look for:
     - change the width of the tall thin section so your final image is readable
     - change the order of the sections (right to left or left to right) so the words appear the right way round.
 
-## Think about what you have made ##
+## Think about what you have made
 
 If you can read the secret message, Well Done! You have completed the first part of the challenge but you have also made something really useful - a photofinish device. These devices are used in major sporting events. Take a look at [this video](https://www.youtube.com/watch?v=QGNgINohags) for an introduction. You have started to make an app that the presenter describes in his video. Now here are some things to try:
 
