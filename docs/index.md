@@ -6,6 +6,10 @@ At the [TechJam](https://techjam.softwarecornwall.org/) there is a secret messag
   <source src="IMG_6230.mp4" type="video/mp4">
 </video>
 
+## Optional extra: Practice making programs with Python
+
+You can choose the programing language you want to use for this challenge. If you are still learning about coding try Python and practice writing some basic programs fist. You use [this guide](https://cioportfolio.github.io/python) to help you get started.
+
 ## Get some computer vision tools
 
 For this challenge we can use some computer vision tools called "OpenCV". This can work with lots of programing languages, including Python.
