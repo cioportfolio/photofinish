@@ -1,5 +1,5 @@
 # Save a main.py in the pico
-# Generate and save message.py in the pic so that it can be imported
+# Generate and save message.py in the pico so that it can be imported
 
 import array, time
 from machine import Pin

@@ -41,6 +41,7 @@ OpenCV helps us with computer vision but the computer isn't "seeing" in the same
 There are loads of tutorials and examples about arrays online. Many of them will mention a tool called "numpy". Search for you own guides or try this [guide on Mattermost](https://mattermost.com/blog/beginners-guide-to-numpy/)
 
 Things to practice:
+
 - make an empty array of a particular shape and size
 - investigate the shape and size of arrays
 - fill arrays with different types of data
